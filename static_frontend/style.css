@@ -69,13 +69,31 @@ a:hover {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1.2rem 10%;
   background-color: var(--dark-gray);
   border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+  gap: 15px;
 }
-.nav-menu { display: flex; list-style: none; gap: 25px; }
-.nav-menu a { color: var(--text-main); text-decoration: none; font-weight: 500; }
-.nav-menu a:hover { color: var(--accent-cyan); }
+
+.nav-menu { 
+  display: flex; 
+  list-style: none; 
+  gap: 25px; 
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a { 
+  color: var(--text-main); 
+  text-decoration: none; 
+  font-weight: 500; 
+}
+
+.nav-menu a:hover { 
+  color: var(--accent-cyan); 
+}
 
 #main-content { flex: 1; padding: 40px 10%; }
 footer {
@@ -254,13 +272,13 @@ footer {
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+      flex-direction: column;
+      text-align: center;
     }
     
     .nav-menu {
-        justify-content: center;
+      justify-content: center;
+      flex-wrap: wrap;
     }
     
     .contact-container {
