@@ -39,3 +39,23 @@ a {
 a:hover {
   text-shadow: 0 0 8px var(--primary-color);
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 10%;
+  background-color: var(--dark-gray);
+  border-bottom: 1px solid var(--border-color);
+}
+.nav-menu { display: flex; list-style: none; gap: 25px; }
+.nav-menu a { color: var(--text-main); text-decoration: none; font-weight: 500; }
+.nav-menu a:hover { color: var(--accent-cyan); }
+
+#main-content { flex: 1; padding: 40px 10%; }
+footer {
+  padding: 20px;
+  background-color: var(--dark-gray);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+.status-online { color: var(--primary-green); font-weight: bold; }
