@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - CTF Knowledge Base</title>
+    <title>Security Tools - CTF Knowledge Base</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -14,28 +14,31 @@
                 <ul class="nav-menu">
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/components/writeups.html">Writeups</a></li>
-                    <li><a href="/components/tools.html">Security Tools</a></li>
-                    <li><a href="/components/contact.html" class="active">Contact Us</a></li>
+                    <li><a href="/components/tools.html" class="active">Security Tools</a></li>
+                    <li><a href="/components/contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
         <main id="main-content">
             <section class="page-header">
-                <h1>Contact Us</h1>
-                <p>Get in touch with the CTF team</p>
+                <h1>Security Tools</h1>
+                <p>Essential tools for penetration testing and CTF competitions</p>
             </section>
-            <div class="contact-container">
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-                <div class="contact-info">
-                    <h3>Other Ways to Reach Us</h3>
-                    <p>📧 team@ctf-archive.com</p>
-                    <p>🐦 Twitter: @CTFArchive</p>
-                    <p>💬 Discord: CTF Community Server</p>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h2>Burp Suite</h2>
+                    <p>Web vulnerability scanner and proxy tool</p>
+                    <span class="tool-tag">Web Security</span>
+                </div>
+                <div class="tool-card">
+                    <h2>Ghidra</h2>
+                    <p>Reverse engineering framework</p>
+                    <span class="tool-tag">Reverse Engineering</span>
+                </div>
+                <div class="tool-card">
+                    <h2>Wireshark</h2>
+                    <p>Network protocol analyzer</p>
+                    <span class="tool-tag">Network</span>
                 </div>
             </div>
         </main>
