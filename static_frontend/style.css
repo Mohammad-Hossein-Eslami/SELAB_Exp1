@@ -4,17 +4,38 @@
   box-sizing: border-box;
 }
 
+
 :root {
+  --primary-color: #0066cc;
+  --primary-green: #00aa33;
+  --bg-color: #f5f5f5;
+  --surface-color: #ffffff;
+  --text-color: #333333;
+  --text-secondary: #666666;
+  --dark-gray: #e0e0e0;
+  --border-color: #cccccc;
+  --text-main: #333333;
+  --accent-cyan: #0066cc;
+  --hero-bg-start: #e3f2fd;
+  --hero-bg-end: #f5f5f5;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+[data-theme="dark"] {
   --primary-color: #00ff41;
   --primary-green: #00ff41;
   --bg-color: #0a0a0a;
   --surface-color: #1a1a1a;
   --text-color: #e0e0e0;
+  --text-secondary: #aaaaaa;
   --dark-gray: #111111;
   --border-color: #2a2a2a;
   --text-main: #e0e0e0;
   --accent-cyan: #00ffff;
-  font-family: 'Fira Code', 'Courier New', monospace;
+  --hero-bg-start: #161b22;
+  --hero-bg-end: #0d1117;
+  --card-shadow: rgba(0, 255, 65, 0.1);
 }
 
 body {
@@ -68,7 +89,7 @@ footer {
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
+  background: linear-gradient(180deg, var(--hero-bg-start) 0%, var(--hero-bg-end) 100%);
   border: 1px solid var(--border-color);
   border-radius: 8px;
 }
@@ -258,4 +279,62 @@ footer {
     #main-content {
         padding: 20px 5%;
     }
+}
+
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+  border-color: var(--primary-color);
+}
+
+.theme-toggle .light-icon,
+.theme-toggle .dark-icon {
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+/* Show/hide appropriate icon based on theme */
+[data-theme="dark"] .light-icon {
+  display: none;
+}
+
+[data-theme="dark"] .dark-icon {
+  display: inline-block;
+}
+
+[data-theme="light"] .light-icon {
+  display: inline-block;
+}
+
+[data-theme="light"] .dark-icon {
+  display: none;
+}
+
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.writeup-card,
+.tool-card,
+.contact-form,
+.contact-info {
+  box-shadow: 0 2px 8px var(--card-shadow);
+}
+
+.writeup-card:hover {
+  box-shadow: 0 10px 20px var(--card-shadow);
 }
