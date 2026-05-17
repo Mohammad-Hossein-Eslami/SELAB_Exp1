@@ -1,13 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+    <script src="./theme.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <header id="header">
+            <nav class="navbar">
+                <div class="nav-logo">SECRET_LOG</div>
+                <ul class="nav-menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./components/writeups.html">Writeups</a></li>
+                    <li><a href="./components/tools.html">Security Tools</a></li>
+                    <li><a href="./components/contact.html">Contact Us</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="light-icon">☀️</span>
+                    <span class="dark-icon">🌙</span>
+                </button>
+            </nav>
+        </header>
+        <main id="main-content">
+            <section class="hero">
+                <h1>CTF Knowledge Base</h1>
+                <p>Dive into writeups, tools, and security resources.</p>
+            </section>
+            <section class="system-monitor">
+                <h3>📡 Core Network Terminals</h3>
+                <div class="monitor-grid">
+                    <div class="status-node"><span>Main Frame:</span> <span class="node-up">ONLINE</span></div>
+                    <div class="status-node"><span>Database Node:</span> <span class="node-up">SECURE</span></div>
+                    <div class="status-node"><span>Proxy Chain:</span> <span class="node-warn">FILTERED</span></div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="footer-info">
+                <p>&copy; 2026 CTF Archive | System Status: <span class="status-online">Online</span></p>
+                <small>Designed for Software Engineering Lab</small>
+            </div>
+        </footer>
+                <!-- دکمه شناور گزارش باگ -->
+        <button class="report-floater" id="open-report-btn">
+            <span>🪲 Report Vulnerability</span>
+        </button>
+
+        <!-- پنجره مودال مخفی -->
+        <div class="modal-overlay" id="report-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>💀 Exploit Report Terminal</h3>
+                    <button class="close-modal-btn" id="close-report-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <label for="vuln-type">Vulnerability Category:</label>
+                    <select id="vuln-type">
+                        <option value="pwn">Binary Exploitation (Pwn)</option>
+                        <option value="web">Web Application Security</option>
+                        <option value="rev">Reverse Engineering</option>
+                    </select>
+                    
+                    <label for="exploit-payload">Exploit Payload / Flag:</label>
+                    <textarea id="exploit-payload" placeholder="Enter FLAG{...} or PoC script..."></textarea>
+                    
+                    <button class="submit-terminal-btn" onclick="submitExploitReport()">Execute Submission</button>
+                    <div class="terminal-output" id="terminal-status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
 </html>
