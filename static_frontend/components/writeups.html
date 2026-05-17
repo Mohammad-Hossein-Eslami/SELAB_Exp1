@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTF Writeups</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <script>
         const savedTheme = localStorage.getItem('theme') || 'dark';
-        
         if (savedTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
         } else {
             document.documentElement.setAttribute('data-theme', 'light');
         }
     </script>
-    <script src="theme.js" defer></script>
-    <script type="module" src="main.js"></script>
+    <script src="../theme.js" defer></script>
 </head>
 <body>
     <div id="app">
@@ -23,10 +21,10 @@
             <nav class="navbar">
                 <div class="nav-logo">SECRET_LOG</div>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="components/writeups.html">Writeups</a></li>
-                    <li><a href="components/tools.html">Security Tools</a></li>
-                    <li><a href="components/contact.html">Contact Us</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="writeups.html">Writeups</a></li>
+                    <li><a href="tools.html">Security Tools</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                     <span class="light-icon">☀️</span>
@@ -61,6 +59,6 @@
             </div>
         </footer>
     </div>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="../main.js"></script>
 </body>
 </html>
