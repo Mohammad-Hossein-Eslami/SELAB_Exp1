@@ -53,6 +53,34 @@
                 <small>Designed for Software Engineering Lab</small>
             </div>
         </footer>
+                <!-- دکمه شناور گزارش باگ -->
+        <button class="report-floater" id="open-report-btn">
+            <span>🪲 Report Vulnerability</span>
+        </button>
+
+        <!-- پنجره مودال مخفی -->
+        <div class="modal-overlay" id="report-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>💀 Exploit Report Terminal</h3>
+                    <button class="close-modal-btn" id="close-report-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <label for="vuln-type">Vulnerability Category:</label>
+                    <select id="vuln-type">
+                        <option value="pwn">Binary Exploitation (Pwn)</option>
+                        <option value="web">Web Application Security</option>
+                        <option value="rev">Reverse Engineering</option>
+                    </select>
+                    
+                    <label for="exploit-payload">Exploit Payload / Flag:</label>
+                    <textarea id="exploit-payload" placeholder="Enter FLAG{...} or PoC script..."></textarea>
+                    
+                    <button class="submit-terminal-btn" onclick="submitExploitReport()">Execute Submission</button>
+                    <div class="terminal-output" id="terminal-status"></div>
+                </div>
+            </div>
+        </div>
     </div>
     <script type="module" src="./main.js"></script>
 </body>
