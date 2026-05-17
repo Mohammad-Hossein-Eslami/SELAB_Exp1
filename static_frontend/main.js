@@ -19,3 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+const heroText = document.querySelector('.hero p');
+if (heroText) {
+  const txt = heroText.innerText;
+  heroText.innerText = '';
+  let i = 0;
+  function typeWriter() {
+    if (i < txt.length) {
+      heroText.innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, 40);
+    }
+  }
+  typeWriter();
+}
