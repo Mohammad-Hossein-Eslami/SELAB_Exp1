@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTF Tools</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <script>
         const savedTheme = localStorage.getItem('theme') || 'dark';
         
@@ -14,7 +14,8 @@
             document.documentElement.setAttribute('data-theme', 'light');
         }
     </script>
-    <script src="/theme.js" defer></script>
+    <script src="theme.js" defer></script>
+    <script type="module" src="main.js"></script>
 </head>
 <body>
     <div id="app">
@@ -22,10 +23,10 @@
             <nav class="navbar">
                 <div class="nav-logo">SECRET_LOG</div>
                 <ul class="nav-menu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/components/writeups.html">Writeups</a></li>
-                    <li><a href="/components/tools.html">Security Tools</a></li>
-                    <li><a href="/components/contact.html">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="components/writeups.html">Writeups</a></li>
+                    <li><a href="components/tools.html">Security Tools</a></li>
+                    <li><a href="components/contact.html">Contact Us</a></li>
                 </ul>
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                     <span class="light-icon">☀️</span>
