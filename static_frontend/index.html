@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTF Knowledge Base - Home</title>
+    <title>Your Title Here</title>
     <link rel="stylesheet" href="/style.css">
+    <script src="/theme.js" defer></script>
 </head>
 <body>
     <div id="app">
@@ -12,11 +13,15 @@
             <nav class="navbar">
                 <div class="nav-logo">SECRET_LOG</div>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="components/writeups.html">Writeups</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/components/writeups.html">Writeups</a></li>
                     <li><a href="/components/tools.html">Security Tools</a></li>
-                    <li><a href="components/contact.html">Contact Us</a></li>
+                    <li><a href="/components/contact.html">Contact Us</a></li>
                 </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="light-icon">☀️</span>
+                    <span class="dark-icon">🌙</span>
+                </button>
             </nav>
         </header>
         <main id="main-content">
